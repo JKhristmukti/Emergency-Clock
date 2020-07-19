@@ -32,10 +32,10 @@ function draw() {
   scAngle = map(sc,0,60,0,360);
 
   push();
-  rotate(scAngle);
-  stroke("blue");
+  rotate(hrAngle);
+  stroke("red");
   strokeWeight(7);
-  line(200,120,200,200);
+  line(200,140,200,200);
   pop();
 
   push();
@@ -46,10 +46,10 @@ function draw() {
   pop();
 
   push();
-  rotate(hrAngle);
-  stroke("red");
+  rotate(scAngle);
+  stroke("blue");
   strokeWeight(7);
-  line(200,140,200,200);
+  line(200,120,200,200);
   pop();
 
   //textSize(50);
