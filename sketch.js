@@ -42,14 +42,14 @@ function draw() {
   rotate(mnAngle);
   stroke("green");
   strokeWeight(7);
-  line(200,140,200,200);
+  line(200,130,200,200);
   pop();
 
   push();
-  rotate(scAngle);
+  rotate(hrAngle);
   stroke("red");
   strokeWeight(7);
-  line(200,180,200,200);
+  line(200,140,200,200);
   pop();
 
   //textSize(50);
