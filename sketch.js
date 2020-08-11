@@ -11,21 +11,26 @@ function setup() {
 }
 
 function draw() {
-  background(255,255,255);
+  background(0,0,0);
   angleMode(DEGREES);
-
-  push();
-  ellipseMode(RADIUS);
-  fill("white");
-  ellipse(200,200,100,100);
-  pop();
-
-
+  
   hr = hour();
   mn = minute();
   sc = second();
+
+  textSize(25);
+  text("Time: " + hr + ": " + mn + ": " + sc, 70,370);
+
+  textSize(15);
+  text("12",193.5,103);
+  text("3",297.5,204);
+  text("6",195,307);
+  text("9",95.5,204);
+
+  translate(200,200);
+  rotate(-90);
   
-  hrAngle = map(hr,0,60,0,360);
+  hrAngle = map(hr%12,0,12,0,360);
   
   mnAngle = map(mn,0,60,0,360);
   
@@ -35,25 +40,22 @@ function draw() {
   rotate(hrAngle);
   stroke("red");
   strokeWeight(7);
-  line(200,140,200,200);
+  line(0,0,50,0);
   pop();
 
   push();
   rotate(mnAngle);
   stroke("green");
   strokeWeight(7);
-  line(200,130,200,200);
+  line(0,0,75,0);
   pop();
 
   push();
   rotate(scAngle);
   stroke("blue");
   strokeWeight(7);
-  line(200,120,200,200);
+  line(0,0,100,0);
   pop();
-
-  //textSize(50);
-  //text("Time: " + hr + ": " + mn + ": " + sc, 50,100);
 
   drawSprites();
 }
